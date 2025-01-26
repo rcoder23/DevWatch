@@ -1,14 +1,14 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import org.example.model.ErrorPayload;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class ErrorTrackerClient {
     private final String apiEndpoint;
-    private final ObjectMapper objectMapper = new ObjectMapper(); // Jackson for JSON serialization
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public ErrorTrackerClient(String apiEndpoint) {
         this.apiEndpoint = apiEndpoint;
@@ -53,25 +53,6 @@ public class ErrorTrackerClient {
             sb.append(element.toString()).append("\n");
         }
         return sb.toString();
-    }
-
-    // A simple class to represent the error payload
-    static class ErrorPayload {
-        private final String message;
-        private final String stackTrace;
-
-        public ErrorPayload(String message, String stackTrace) {
-            this.message = message;
-            this.stackTrace = stackTrace;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public String getStackTrace() {
-            return stackTrace;
-        }
     }
 
 }

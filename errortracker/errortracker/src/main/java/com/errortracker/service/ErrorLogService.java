@@ -17,4 +17,8 @@ public class ErrorLogService {
         ErrorLog errorLog = new ErrorLog(message, stackTrace, LocalDateTime.now());
         errorLogRepository.save(errorLog);
     }
+
+    public Object getAllErrorLog() {
+        return errorLogRepository.findAll();
+    }
 }

@@ -1,0 +1,71 @@
+# IntelliJ IDEA specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Compilation output
+out/
+target/
+build/
+
+# Maven specific
+.mvn/
+*.log
+target/
+
+# Gradle specific
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# VS Code specific
+.vscode/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Class files
+*.class
+
+# JAR/WAR/EAR files
+*.jar
+*.war
+*.ear
+
+# Local environment files
+.env
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Lombok cache
+.lombok/
+
+# Logs and crash reports
+*.pid
+hs_err_pid*
+
+# Ignore libraries folder (optional, adjust as needed)
+libs/
+!libs/*.md
+
+# Ignore IntelliJ IDEA plugin data (optional)
+.idea_modules/
+
+# Include README files
+!README.md
+
+# Ignore automatically generated files
+*.form
+
+# Ignore other IDE-specific files
+*.sw?
